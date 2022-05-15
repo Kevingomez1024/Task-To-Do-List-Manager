@@ -1,0 +1,77 @@
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/appsettings.Development.json
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/appsettings.json
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/WebAPI.deps.json
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/WebAPI.runtimeconfig.json
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/WebAPI.runtimeconfig.dev.json
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/WebAPI.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/ref/WebAPI.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/WebAPI.pdb
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/DnsClient.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/MongoDB.Bson.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/MongoDB.Driver.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/MongoDB.Driver.Core.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/MongoDB.Libmongocrypt.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/SharpCompress.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/linux/native/libsnappy64.so
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/linux/native/libzstd.so
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/osx/native/libsnappy64.dylib
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/osx/native/libzstd.dylib
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/win/native/libzstd.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/win/native/snappy32.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/win/native/snappy64.dll
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/linux/native/libmongocrypt.so
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/osx/native/libmongocrypt.dylib
+/Users/kevingomez/Projects/WebAPI/bin/Debug/net5.0/runtimes/win/native/mongocrypt.dll
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.csproj.AssemblyReference.cache
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.AssemblyInfoInputs.cache
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.AssemblyInfo.cs
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.csproj.CoreCompileInputs.cache
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/scopedcss/bundle/WebAPI.styles.css
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/staticwebassets/WebAPI.StaticWebAssets.Manifest.cache
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.RazorTargetAssemblyInfo.cache
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.csproj.CopyComplete
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.dll
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/ref/WebAPI.dll
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.pdb
+/Users/kevingomez/Projects/WebAPI/obj/Debug/net5.0/WebAPI.genruntimeconfig.cache
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/appsettings.Development.json
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/appsettings.json
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/WebAPI.deps.json
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/WebAPI.runtimeconfig.json
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/WebAPI.runtimeconfig.dev.json
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/WebAPI.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/ref/WebAPI.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/WebAPI.pdb
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/DnsClient.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/MongoDB.Bson.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/MongoDB.Driver.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/MongoDB.Driver.Core.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/MongoDB.Libmongocrypt.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/SharpCompress.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/linux/native/libsnappy64.so
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/linux/native/libzstd.so
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/osx/native/libsnappy64.dylib
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/osx/native/libzstd.dylib
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/win/native/libzstd.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/win/native/snappy32.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/win/native/snappy64.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/linux/native/libmongocrypt.so
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/osx/native/libmongocrypt.dylib
+/Users/kevingomez/Projects/Task Manager/WebAPI/bin/Debug/net5.0/runtimes/win/native/mongocrypt.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.csproj.AssemblyReference.cache
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.AssemblyInfoInputs.cache
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.AssemblyInfo.cs
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.csproj.CoreCompileInputs.cache
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/scopedcss/bundle/WebAPI.styles.css
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/staticwebassets/WebAPI.StaticWebAssets.Manifest.cache
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.RazorTargetAssemblyInfo.cache
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.csproj.CopyComplete
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/ref/WebAPI.dll
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.pdb
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/WebAPI.genruntimeconfig.cache
+/Users/kevingomez/Projects/Task Manager/WebAPI/obj/Debug/net5.0/staticwebassets/WebAPI.StaticWebAssets.xml
