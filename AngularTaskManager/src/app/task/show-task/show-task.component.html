@@ -1,33 +1,21 @@
-<button type="button" class="btn example-popover" data-bs-toggle="popover" title="Popover title" data-bs-content="#NameFilter">Click to toggle popover</button>
+
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary float-end m-2"
-data-bs-toggle="modal" data-bs-target="#exampleModal"
-(click)="addClick()"
-data-backdrop="static" data-keyboard="false"
->
+(click)="open(content)">
   Add Task +
 </button>
 
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-  <div class="modal-dialog modal-dialog-centered modal-x1">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{ModalTitle}}</h5>
-        <button type="button" class="btn-close"
-        data-bs-dismiss="modal" aria-label="Close"
-        (click)="closeClick()">
-      </button>
-      </div>
-      <div class="modal-body">
-        <app-add-edit-task [task]="task" *ngIf="ActivateAddEditTaskComp"></app-add-edit-task>
-      </div>
-    </div>
+<!-- NgBootstrap Modal -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{ModalTitle}}</h4>
+    <button type="button" class="btn-close" aria-label="close" (click)="modal.close()"></button>
   </div>
-</div>
+  <div class="modal-body">
+    <app-add-edit-task (listChange)="[modal.close(),closeClick()]" [task]="task" *ngIf="ActivateAddEditTaskComp"></app-add-edit-task>
+  </div>
+</ng-template>
 
 
 <table class="table table-striped">
@@ -61,10 +49,22 @@ data-backdrop="static" data-keyboard="false"
       <th>Date Added</th>
       <th>
         <div class="d-flex flex-row">
-          <input [(ngModel)]="StatusFilter" class="form-control"
-          (keyup)="FilterFn()" placeholder="Filter">
+          <button type="button" class="btn btn-light"
+          (click)="sortResult('Status',true)"
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
+          </svg>
+          </button>
 
+          <button type="button" class="btn btn-light"
+          (click)="sortResult('Status',false)"
 
+          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+            <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+          </svg>
+          </button>
         </div>
         Status</th>
       <th>Date Finished</th>
@@ -76,7 +76,15 @@ data-backdrop="static" data-keyboard="false"
       <tr *ngFor="let dataItem of TaskList">
         <td>{{dataItem.Id}}</td>
         <td>{{dataItem.Name}}</td>
-        <td>{{dataItem.Description}}</td>
+        <td>
+          <button type="button" class="btn btn-light m-1" placement="left-start"
+            [ngbPopover]="dataItem.Description" [popoverTitle]="dataItem.Name"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            </svg>
+          </button>
+        </td>
         <td>{{dataItem.DateAdded}}</td>
 
         <td  *ngIf="dataItem.Status == 'Not Started'" class="bg-secondary text-white">{{dataItem.Status}}</td>
@@ -87,7 +95,7 @@ data-backdrop="static" data-keyboard="false"
         <td>
             <button type="button" class = "btn btn-light m-1"
             data-bs-toggle="modal" data-bs-target="#exampleModal"
-            (click)="editClick(dataItem)"
+            (click)="editClick(dataItem,content)"
             data-backdrop="static" data-keyboard="false"
             ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
               <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
