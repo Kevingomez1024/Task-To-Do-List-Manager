@@ -15,6 +15,9 @@ namespace WebAPI.Models
         [BsonElement("Name")]
         public string Name { get; set; }
 
+        [BsonElement("Description")]
+        public string Description { get; set; }
+
         [BsonElement("DateAdded")]
         //[BsonDateTimeOptions(Kind =DateTimeKind.Local)]
         //[JsonIgnore]

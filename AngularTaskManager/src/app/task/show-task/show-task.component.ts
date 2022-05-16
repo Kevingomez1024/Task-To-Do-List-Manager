@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
-
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 declare var bootstrap: any;
@@ -12,7 +12,7 @@ declare var bootstrap: any;
 })
 export class ShowTaskComponent implements OnInit {
 
-  constructor(private service:SharedService) { }
+  constructor(private service:SharedService,private modalService: NgbModal) { }
 
   TaskList:any=[];
 
@@ -27,12 +27,17 @@ export class ShowTaskComponent implements OnInit {
 
   ngOnInit(): void {
     this.refreshTaskList();
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl)
-    });
 
+  }
 
+  open(content:any) {
+    this.task = {
+      Id:null,
+      Name:"",
+    }
+    this.ModalTitle="Add Task";
+    this.ActivateAddEditTaskComp = true;
+    const modalRef = this.modalService.open(content,{backdrop:"static",keyboard:false});
   }
 
   addClick(){
@@ -44,10 +49,12 @@ export class ShowTaskComponent implements OnInit {
       this.ActivateAddEditTaskComp = true;
   }
 
-  editClick(item: any){
+  editClick(item: any,content:any){
     this.task = item;
     this.ModalTitle = "Edit Task"
     this.ActivateAddEditTaskComp=true;
+    const modalRef = this.modalService.open(content,{backdrop:"static",keyboard:false});
+
   }
 
   deleteClick(item:any){
@@ -62,6 +69,7 @@ export class ShowTaskComponent implements OnInit {
   closeClick(){
     this.ActivateAddEditTaskComp=false;
     this.refreshTaskList();
+
   }
 
   refreshTaskList(){
@@ -88,7 +96,7 @@ export class ShowTaskComponent implements OnInit {
 
 
   sortResult(prop:any,asc:boolean){
-    this.TaskList = this.TaskListWithoutFilter.sort(function(a:string,b:string){
+    this.TaskList = this.TaskList.sort(function(a:string,b:string){
       if(asc){
         return(a[prop]>b[prop])? 1 : ((a[prop]<b[prop])? -1 : 0);
       }

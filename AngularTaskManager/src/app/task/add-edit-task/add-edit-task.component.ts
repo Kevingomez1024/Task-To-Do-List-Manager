@@ -1,5 +1,5 @@
 import { SharedService } from './../../shared.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input,Output, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-add-edit-task',
@@ -18,6 +18,8 @@ export class AddEditTaskComponent implements OnInit {
   Status!:string;
   DateFinished!:string;
 
+
+  @Output() listChange:EventEmitter<any> =new EventEmitter<any>();
 
 
 
@@ -52,7 +54,9 @@ export class AddEditTaskComponent implements OnInit {
 
     this.service.addTask(val).subscribe(res => {
       alert(res.toString());
+      this.listChange.emit();
     });
+
 
 
   }
@@ -73,7 +77,9 @@ export class AddEditTaskComponent implements OnInit {
 
     this.service.updateTask(val).subscribe(res => {
       alert(res.toString());
+      this.listChange.emit();
     });
+
   }
 
 }
