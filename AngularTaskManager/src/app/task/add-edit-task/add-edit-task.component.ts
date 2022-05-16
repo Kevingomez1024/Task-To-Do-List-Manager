@@ -13,6 +13,7 @@ export class AddEditTaskComponent implements OnInit {
   @Input() task:any;
   Id!:string;
   Name!:string;
+  Description!:string;
   DateAdded!: string;
   Status!:string;
   DateFinished!:string;
@@ -24,6 +25,7 @@ export class AddEditTaskComponent implements OnInit {
     this.Id = this.task.Id;
     this.Name = this.task.Name;
     this.DateAdded = this.task.DateAdded;
+    this.Description = this.task.Description;
 
     if(this.Status == null){
       this.Status = "Not Started"
@@ -36,9 +38,13 @@ export class AddEditTaskComponent implements OnInit {
   }
 
   addTask(){
+    if(this.Name == null || this.Description == null){
+      return alert("One or more fields empty!");
+    }
     var val = {
       Id:null,
       Name:this.Name,
+      Description:this.Description,
       DateAdded:null,
       Status:this.Status,
       DateFinished:null
@@ -52,9 +58,14 @@ export class AddEditTaskComponent implements OnInit {
   }
 
   updateTask(){
+    if(this.Name == null || this.Description == null){
+      return alert("One or more fields empty!");
+    }
+
     var val = {
       Id:this.Id,
       Name:this.Name,
+      Description:this.Description,
       DateAdded:this.DateAdded,
       Status:this.Status,
       DateFinished:this.DateFinished

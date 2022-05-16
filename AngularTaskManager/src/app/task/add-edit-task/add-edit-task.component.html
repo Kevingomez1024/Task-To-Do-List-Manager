@@ -6,6 +6,7 @@
       placeholder="Task Name">
 
   </div>
+
   <label class="col-sm-5 col-form-label pt-3">Status:</label>
   <div class="col-sm-7 pt-3">
     <div class="btn-group" role="group">
@@ -19,6 +20,12 @@
       <label class="btn btn-outline-success" for="btnradio3">Completed</label>
     </div>
   </div>
+
+  <label class="col-sm-5 col-form-label pt-3 float-beginning">Description:</label>
+    <div class="col-sm-7 pt-3">
+      <textarea [(ngModel)]='Description' class="form-control" placeholder="Add A Description">
+      </textarea>
+    </div>
 
 </div>
 
