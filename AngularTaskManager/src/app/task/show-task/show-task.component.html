@@ -1,4 +1,4 @@
-<button type="button" class="btn " data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+<button type="button" class="btn example-popover" data-bs-toggle="popover" title="Popover title" data-bs-content="#NameFilter">Click to toggle popover</button>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary float-end m-2"
@@ -12,7 +12,7 @@ data-backdrop="static" data-keyboard="false"
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
   <div class="modal-dialog modal-dialog-centered modal-x1">
     <div class="modal-content">
       <div class="modal-header">
@@ -57,6 +57,7 @@ data-backdrop="static" data-keyboard="false"
         </div>
 
         Task Name</th>
+      <th>Description</th>
       <th>Date Added</th>
       <th>
         <div class="d-flex flex-row">
@@ -75,6 +76,7 @@ data-backdrop="static" data-keyboard="false"
       <tr *ngFor="let dataItem of TaskList">
         <td>{{dataItem.Id}}</td>
         <td>{{dataItem.Name}}</td>
+        <td>{{dataItem.Description}}</td>
         <td>{{dataItem.DateAdded}}</td>
 
         <td  *ngIf="dataItem.Status == 'Not Started'" class="bg-secondary text-white">{{dataItem.Status}}</td>

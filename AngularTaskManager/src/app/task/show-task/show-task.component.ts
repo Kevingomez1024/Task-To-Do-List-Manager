@@ -29,8 +29,9 @@ export class ShowTaskComponent implements OnInit {
     this.refreshTaskList();
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl,'toggleEnabled')
+      return new bootstrap.Popover(popoverTriggerEl)
     });
+
 
   }
 
